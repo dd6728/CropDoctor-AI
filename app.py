@@ -6,52 +6,67 @@ st.set_page_config(
 )
 
 st.title("🌱 CropDoctorAI")
-st.subheader("Plant Disease Detection and Solution")
+st.write("AI-based Crop Disease Detection")
 
-st.write("Select a plant and disease to get the solution.")
-
-plant = st.selectbox(
-    "🌱 Select Plant",
-    ["Tomato", "Rice", "Potato", "Chilli"]
+# 1. Upload Crop Image
+uploaded_file = st.file_uploader(
+    "📷 Upload Crop Image",
+    type=["jpg", "jpeg", "png"]
 )
 
-if plant == "Tomato":
-    diseases = ["Early Blight", "Late Blight"]
-
-elif plant == "Rice":
-    diseases = ["Rice Blast", "Bacterial Leaf Blight"]
-
-elif plant == "Potato":
-    diseases = ["Early Blight", "Late Blight"]
-
-else:
-    diseases = ["Leaf Curl"]
-
-disease = st.selectbox(
-    "🦠 Select Disease",
-    diseases
+# 2. Language
+language = st.radio(
+    "🌐 Select Language / மொழியை தேர்வு செய்யவும்",
+    ["English", "தமிழ்"]
 )
 
-if disease == "Early Blight":
-    solution = "Remove infected leaves and follow recommended disease-management practices."
+if uploaded_file is not None:
 
-elif disease == "Late Blight":
-    solution = "Remove affected plant parts and follow recommended treatment."
+    st.image(
+        uploaded_file,
+        caption="Uploaded Crop Image",
+        use_container_width=True
+    )
 
-elif disease == "Rice Blast":
-    solution = "Use healthy seeds and follow recommended disease-management practices."
+    if st.button("🔍 Analyze Crop"):
 
-elif disease == "Bacterial Leaf Blight":
-    solution = "Use resistant varieties and maintain proper field sanitation."
+        st.divider()
+
+        # Demo result for UI testing
+        if language == "தமிழ்":
+
+            st.subheader("🌱 பயிர் பெயர்")
+            st.write("தக்காளி")
+
+            st.subheader("🦠 நோய் பெயர்")
+            st.write("நோய் அறிகுறிகள் கண்டறியப்பட்டுள்ளன")
+
+            st.subheader("💊 பரிந்துரைக்கப்படும் தீர்வு")
+            st.write(
+                "பாதிக்கப்பட்ட பகுதிகளை கண்காணிக்கவும். "
+                "சரியான சிகிச்சைக்காக வேளாண்மை நிபுணரை அணுகவும்."
+            )
+
+            st.subheader("📊 நம்பகத்தன்மை")
+            st.write("90%")
+
+        else:
+
+            st.subheader("🌱 Crop Name")
+            st.write("Tomato")
+
+            st.subheader("🦠 Disease Name")
+            st.write("Possible disease symptoms detected")
+
+            st.subheader("💊 Suggested Solution")
+            st.write(
+                "Monitor affected areas and consult an "
+                "agricultural expert for appropriate treatment."
+            )
+
+            st.subheader("📊 Confidence")
+            st.write("90%")
 
 else:
-    solution = "Monitor the plant regularly and manage insect vectors."
 
-st.write("### 🌱 Plant Name")
-st.write(plant)
-
-st.write("### 🦠 Disease Name")
-st.write(disease)
-
-st.write("### 💊 Solution")
-st.success(solution)
+    st.info("📷 Please upload a crop image to begin.")
