@@ -8,13 +8,13 @@ st.set_page_config(
 st.title("🌱 CropDoctorAI")
 st.write("AI-powered Crop Disease Detection")
 
-# 1. Upload Crop Image
+# Upload crop image
 uploaded_file = st.file_uploader(
     "📷 Upload Crop Image",
     type=["jpg", "jpeg", "png"]
 )
 
-# 2. Select Language
+# Select language
 language = st.radio(
     "🌐 Select Language / மொழியை தேர்வு செய்யவும்",
     ["English", "தமிழ்"]
@@ -32,7 +32,6 @@ if uploaded_file is not None:
 
         st.divider()
 
-        # Demo result
         if language == "தமிழ்":
 
             st.subheader("🌱 பயிர் பெயர்")
@@ -69,4 +68,6 @@ if uploaded_file is not None:
 
 else:
 
-    st.info("📷 Please upload a crop image to begin.")
+    st.info(
+        "📷 Upload an image or take a picture to start diagnosis."
+    )
