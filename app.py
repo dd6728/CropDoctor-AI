@@ -1,11 +1,17 @@
 import streamlit as st
 
-st.title("🌱 CropDoctorAI")
+st.set_page_config(
+    page_title="CropDoctorAI",
+    page_icon="🌱"
+)
 
-st.write("Plant Disease Detection and Solution")
+st.title("🌱 CropDoctorAI")
+st.subheader("Plant Disease Detection and Solution")
+
+st.write("Select a plant and disease to get the solution.")
 
 plant = st.selectbox(
-    "Select Plant",
+    "🌱 Select Plant",
     ["Tomato", "Rice", "Potato", "Chilli"]
 )
 
@@ -22,7 +28,7 @@ else:
     diseases = ["Leaf Curl"]
 
 disease = st.selectbox(
-    "Select Disease",
+    "🦠 Select Disease",
     diseases
 )
 
@@ -41,10 +47,10 @@ elif disease == "Bacterial Leaf Blight":
 else:
     solution = "Monitor the plant regularly and manage insect vectors."
 
-st.write("### 🌱 Plant")
+st.write("### 🌱 Plant Name")
 st.write(plant)
 
-st.write("### 🦠 Disease")
+st.write("### 🦠 Disease Name")
 st.write(disease)
 
 st.write("### 💊 Solution")
