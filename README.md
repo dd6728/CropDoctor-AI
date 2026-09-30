@@ -1,53 +1,28 @@
 # 🌱 CropDoctorAI
 
-## Plant Disease Detection and Solution
+AI-powered crop disease detection application built with Streamlit.
 
-CropDoctorAI is a Streamlit-based application that helps users identify common plant diseases and provides useful information about symptoms, solutions, and prevention.
+## Features
 
-## 🚀 Features
+- 📷 Upload Crop Image
+- 🌐 English / Tamil
+- 🌱 Crop Name
+- 🦠 Disease Name
+- 💊 Suggested Solution
+- 📊 Confidence
 
-- 🌱 Select plant name
-- 🦠 Select disease name
-- 🔎 View disease symptoms
-- 💊 Get recommended solution
-- 🛡️ View prevention methods
-- 💻 Simple Streamlit interface
-
-## 🌾 Supported Plants
-
-- 🍅 Tomato
-- 🌾 Rice
-- 🥔 Potato
-- 🌶️ Chilli
-
-## 🦠 Supported Diseases
-
-### Tomato
-- Early Blight
-- Late Blight
-
-### Rice
-- Rice Blast
-- Bacterial Leaf Blight
-
-### Potato
-- Early Blight
-- Late Blight
-
-### Chilli
-- Leaf Curl
-
-## 🛠️ Technologies Used
+## Technologies
 
 - Python
 - Streamlit
-- GitHub
+- PyTorch
+- Hugging Face Transformers
+- Pillow
 
-## 📂 Project Structure
+## Disclaimer
 
-```text
-CropDoctorAI/
-│
-├── app.py
-├── requirements.txt
-└── README.md
+This application provides preliminary AI-based information only.
+It is not a guaranteed agricultural diagnosis.
+
+Please consult a qualified agricultural expert before making
+treatment or pesticide-related decisions.
