@@ -2,7 +2,7 @@
 
 AI-powered crop disease detection application built with Streamlit.
 
-## Features
+## 🚀 Features
 
 - 📷 Upload Crop Image
 - 🌐 English / Tamil
@@ -11,15 +11,20 @@ AI-powered crop disease detection application built with Streamlit.
 - 💊 Suggested Solution
 - 📊 Confidence
 
-## Technologies
+## 🛠️ Technologies
 
 - Python
 - Streamlit
 - PyTorch
 - Hugging Face Transformers
+- Torchvision
 - Pillow
 
-## Disclaimer
+## 🎯 Purpose
+
+CropDoctorAI helps users perform preliminary AI-based crop health analysis.
+
+## ⚠️ Disclaimer
 
 This application provides preliminary AI-based information only.
 It is not a guaranteed agricultural diagnosis.
